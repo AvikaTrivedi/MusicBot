@@ -60,7 +60,7 @@ async def skip(client: Client, message: Message):
 
     queue.task_done(chat_id)
 
-    if sira.is_empty(chat_id):
+    if queue.is_empty(chat_id):
         tgcalls.pytgcalls.leave_group_call(chat_id)
     else:
         tgcalls.pytgcalls.change_stream(

@@ -2,7 +2,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 
 import tgcalls
-import sira
+import queue
 from cache.admins import set
 from helpers.wrappers import errors, admins_only
 
@@ -40,7 +40,7 @@ async def resume(client: Client, message: Message):
 @admins_only
 async def stop(client: Client, message: Message):
     try:
-        sira.clear(message.chat.id)
+        queue.clear(message.chat.id)
     except:
         pass
 
@@ -58,13 +58,13 @@ async def stop(client: Client, message: Message):
 async def skip(client: Client, message: Message):
     chat_id = message.chat.id
 
-    sira.task_done(chat_id)
+    queue.task_done(chat_id)
 
     if sira.is_empty(chat_id):
         tgcalls.pytgcalls.leave_group_call(chat_id)
     else:
         tgcalls.pytgcalls.change_stream(
-            chat_id, sira.get(chat_id)["file_path"]
+            chat_id, queue.get(chat_id)["file_path"]
         )
 
     await message.reply_text("DJ DOMIN8or=⏩ Skipped the current song.")

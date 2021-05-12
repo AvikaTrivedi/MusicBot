@@ -4,7 +4,7 @@ from pyrogram.types import Message
 import tgcalls
 from converter import convert
 from youtube import download
-import sira
+from sira import queue
 from config import DURATION_LIMIT
 from helpers.wrappers import errors
 from helpers.errors import DurationLimitError
@@ -63,7 +63,7 @@ async def play(client: Client, message_: Message):
         is_playing = False
 
     if is_playing:
-        position = await sira.add(message_.chat.id, file_path)
+        position = await queue.add(message_.chat.id, file_path)
         await res.edit_text(f"DJ DOMIN8or=#️⃣ Queued at position {position}.")
     else:
         await res.edit_text("DJ DOMIN8or=▶️ Playing...")

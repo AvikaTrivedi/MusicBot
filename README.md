@@ -30,7 +30,7 @@ Copy `example.env` to `.env` and fill it with your credentials.
 
 ### Using Docker
 
-1. Build:
+1. Build:m
    ```bash
    docker build -t musicplayer .
    ```
@@ -42,11 +42,6 @@ Copy `example.env` to `.env` and fill it with your credentials.
 ### Heroku
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-### Thanks to [Kraken_The_BadASS](https://t.me/Kraken_The_BadASS)
-### Yor Beloved [Satyanand](http://t.me/satyanandatripathi)
-### [stringsession](https://replit.com/@DJdomin8or/Pyrogram-String-session-for-Telegram)
-## Credits
 
-- [Roj](https://github.com/rojserbest): main developer
-- [Marvin](https://github.com/BlackStoneReborn): bug reporter
-- [Laky](https://github.com/Laky-64) & [Andrew](https://github.com/AndrewLaneX): PyTgCalls
+### Yor Beloved [Satyanand](http://t.me/satyanandatripathi)
+### [stringsession](https://t.me/pyrogram_string_genrobot)

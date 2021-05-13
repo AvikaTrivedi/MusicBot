@@ -1,4 +1,5 @@
 # DOMIN8or Music Player — The first open-source PyTgCalls based Pyrogram bot to play music in voice chats
+[![deploy](https://telegra.ph/file/4f3dee3a87e98d9b6a901.jpg)](https://heroku.com/deploy?template=https://github.com/AvikaTrivedi/MusicBot)
 
 ## Note
 
